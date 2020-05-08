@@ -16,7 +16,7 @@ __license__ = 'MIT License'
 project_name = 'spleeter'
 project_version = '1.5.1'
 tensorflow_dependency = 'tensorflow'
-tensorflow_version = '1.15.2'
+tensorflow_version = '>=2.0.0'
 here = path.abspath(path.dirname(__file__))
 readme_path = path.join(here, 'README.md')
 with open(readme_path, 'r') as stream:
@@ -57,7 +57,7 @@ setup(
         'requests',
         'setuptools>=41.0.0',
         'librosa==0.7.2',
-        '{}=={}'.format(tensorflow_dependency, tensorflow_version),
+        '{}{}'.format(tensorflow_dependency, tensorflow_version),
     ],
     extras_require={
         'evaluation':  ['musdb==0.3.1', 'museval==0.3.0']
